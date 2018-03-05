@@ -1,0 +1,31 @@
+{
+  "name": "frontendadv.frontpage",
+  "version": "1.0.0",
+  "description": "educational project",
+  "main": "index.js",
+  "scripts": {
+    "test": "tecs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OZida/FrontendAdv.FrontPage.git"
+  },
+  "author": "OZida",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OZida/FrontendAdv.FrontPage/issues"
+  },
+  "homepage": "https://github.com/OZida/FrontendAdv.FrontPage#readme",
+  "dependencies": {
+    "css-loader": "^0.28.10",
+    "eslint": "^4.18.2",
+    "eslint-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.0.4",
+    "jquery": "^3.3.1",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.2",
+    "sw-precache-webpack-plugin": "^0.11.4",
+    "webpack": "^4.1.0"
+  }
+}
