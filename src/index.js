@@ -4,8 +4,8 @@ ctrl.render();
 import Isotope from "isotope-layout";
 import 'owl.carousel';
 import '../node_modules/jquery-parallax.js/parallax.min.js';
-import aa from '../node_modules/owl.carousel/dist/assets/owl.carousel.css';
-import ss from '../node_modules/owl.carousel/dist/assets/owl.theme.default.css';
+import '../node_modules/owl.carousel/dist/assets/owl.carousel.css';
+import '../node_modules/owl.carousel/dist/assets/owl.theme.default.css';
 
 
 // console.log(Isotope);

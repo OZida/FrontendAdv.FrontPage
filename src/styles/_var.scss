@@ -11,8 +11,3 @@ $light_black: #E0E0E0;
 	@include margin (5px, 5px);
 	@include padding (10px, 10px);
 }
-.wrapper {
-	margin: 0 auto;
-	min-width: 980px;
-	width: 980px;
-}
