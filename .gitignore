@@ -1,1 +1,8 @@
 /node_modules/
+/build/*.js
+/build/*.html
+/build/*.ttf
+/build/*.jpg
+/build/*.png
+/build/*static
+/build/!.txt

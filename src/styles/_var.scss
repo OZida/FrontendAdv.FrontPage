@@ -1,0 +1,18 @@
+$light_black: #E0E0E0;
+
+@mixin margin ($vertical, $horisontal) {
+	margin: $vertical $horisontal;
+}
+@mixin padding ($vertical, $horisontal) {
+	padding: $vertical $horisontal;
+}
+.curr_block {
+	background-color: $light_black;
+	@include margin (5px, 5px);
+	@include padding (10px, 10px);
+}
+.wrapper {
+	margin: 0 auto;
+	min-width: 980px;
+	width: 980px;
+}
