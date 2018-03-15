@@ -44,12 +44,13 @@ module.exports = {
         },
         {
         	test: /\.(woff|woff2|eot|ttf|otf)$/,
-			loader: "file-loader"
+			loader: "file-loader",
+			// options: {
+	  //           name: '[name].[ext]',
+	  //           outputPath: 'static/fonts/',    
+	  //           publicPath: '../'
+	  //       }    
         },
-        // {
-        // 	test: /isotope\-|fizzy\-ui\-utils|desandro\-|masonry|outlayer|get\-size|doc\-ready|eventie|eventemitter/,
-        // 	loader: 'imports?define=>false&this=>window'
-        // }	
 		]
 	},	
 	plugins: [

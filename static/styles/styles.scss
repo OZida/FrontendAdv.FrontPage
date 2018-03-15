@@ -1,0 +1,294 @@
+@import './_reset.scss';
+@import './_var.scss';
+@import './adaptiv.scss';
+
+@font-face {
+	font-family: 'Exo', sans-serif;
+	font-weight: 700;
+	src: url('../../static/fonts/Exo-Bold.ttf');
+}
+@font-face {
+	font-family: 'Roboto Slab', serif;
+	font-weight: 400;
+	src: url('../../static/fonts/RobotoSlab-Regular.ttf');
+}
+@font-face {
+	font-family: 'Marck Script', cursive;
+	font-weight: 400;
+	src: url('../../static/fonts/MarckScript-Regular.ttf');
+}
+.wrapper {
+	margin: 0 auto;
+	min-width: 623px;
+	max-width: 960px;
+}
+	
+.header {
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: #191d2b;
+
+	.menu {
+		height: 90px;
+		background-color: #191d2b;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+
+		.logo{
+			flex-basis: 30%;
+
+			img {
+				width: 90px;
+			}
+		}
+		.nav {
+			flex-basis: 45%;
+
+			ul {
+				list-style: none;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+
+				li {
+					display: inline-block;
+					font-family: 'Roboto Slab', serif;
+
+					a {
+						cursor: pointer;
+						text-decoration: none;
+						color: #9b9b9b;
+						font-size: 15px;
+						font-weight: 400;
+						text-transform: uppercase;
+						&:hover {
+							color: #5dd7d4;
+							transition: all 0.6s ease;
+						}
+					}
+				}
+			}
+		}
+		.nav_mini {
+			display: none;
+		}
+		.sidebar {
+			display: none;
+		}
+	}
+}
+.f-nav {
+		z-index: 9999;
+		transition: all 0.4s ease; 
+		position: fixed; 
+		left: 0; 
+		top: 0; 
+		width: 100%;
+
+}
+#section_1 {
+	background-color: #191d2b;
+	margin-top: 90px;
+
+	.owl-theme .owl-dots .owl-dot span {
+		margin: 5px 8px;
+		width: 10px;
+		height: 10px;
+	}
+	.slider_filling {
+		text-align: center;
+
+		h2 {
+			font-family: 'Exo', sans-serif;
+			font-size: 28px;
+			margin: 10px;
+			color: #fff;
+			&:hover {
+				color: #5dd7d4;
+				transition: all 0.6s ease;
+			}	
+		}
+		p {
+			font-family: 'Exo', sans-serif;
+			color: #5dd7d4;
+			line-height: 1.2em;
+			margin: 10px;
+			font-weight: 300;
+			font-size: 20px;
+		}
+	}
+}
+#section_2 {
+	background: url('http://livedemo00.template-help.com/drupal_55960/sites/default/files/parallax-1.jpg') no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	height: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.introduction {
+		width: 100%;
+		padding: 30px 20px;
+		background: rgba(25,29,43,0.6);
+		color: #fff;
+		border-radius: 15px;
+		box-sizing: border-box;
+
+		p {
+			font-family: 'Marck Script', cursive;
+			text-align: justify;
+			text-indent: 1.2em;
+
+			span {
+				color: #5dd7d4;
+				font-weight: 300;
+				text-decoration: underline;
+			}
+		}
+	}
+}
+#section_3 {
+	padding-top: 100px;
+	min-height: 300px;
+	margin: 0;
+	background: transparent;
+	text-align: center;
+	color: #fff;
+	line-height: 2em;
+	
+	h2 {
+		font-family: 'Exo', sans-serif;
+		font-size: 28px;
+	}
+	p {
+		font-family: 'Exo', sans-serif;
+		font-size: 20px;
+		font-weight: 300;
+
+		a {
+			text-decoration: none;
+			color: red;
+		}
+	}
+}
+#section_4 {
+	background: url('http://livedemo00.template-help.com/drupal_55960/sites/default/files/parallax-3-1.jpg') no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	min-height: 380px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	#programmingChart {
+		width: 50%;
+		height: 50%;
+	}
+}
+#section_5 {
+	padding-top: 80px;
+	min-height: 200px;
+	margin: 0;
+	background: transparent;
+	text-align: center;
+	color: #fff;
+	line-height: 2em;
+	
+	h2 {
+		font-family: 'Exo', sans-serif;
+		font-size: 28px;
+	}
+	p {
+		font-family: 'Exo', sans-serif;
+		font-size: 20px;
+		font-weight: 300;
+
+		a {
+			text-decoration: none;
+			color: red;
+		}
+	}
+}
+#section_6 {
+	font-family: 'Roboto Slab', serif;
+	background: url('http://livedemo00.template-help.com/drupal_55960/sites/default/files/parallax-5.jpg') no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	min-height: 850px;
+	margin: 0;
+	text-align: center;
+	padding-top: 50px;
+
+	.filters-button-group {
+		margin-top: 20px;
+		display: flex;
+		justify-content: center;
+
+		.button {
+			cursor: pointer;
+			margin: 0 0 4px 4px;
+			padding: 15px 20px;
+		    border: none;
+		    background: #2d3741;
+		    font-weight: 300;
+		    font-size: 14px;
+		    line-height: 1.2em;
+		    color: #fff;
+		    text-transform: uppercase;
+		    &:focus {
+		    	outline: none;
+		    }
+		}
+	}
+		.is-checked, .button:hover {
+			background: #fff;
+    		color: #9b9b9b;
+		}
+	.grid {
+		width: 100%;
+
+		.item {
+			display: inline-block;
+			width: 28%;
+			height: 130px;
+			margin: 5px;
+			padding: 30px 10px;
+			background: rgba(25,29,43,0.8);
+			color: #fff;
+		}
+	}
+}		
+#section_7 {
+	height: 400px;
+	margin: 0;
+	background: transparent;
+}
+#section_8 {
+	background: url('http://static.livedemo00.template-help.com/drupal_55960/sites/all/themes/theme1032/images/main-bg.jpg') no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	height: 800px;
+	margin: 0;
+}
+#section_9 {
+	height: 400px;
+	margin: 0;
+	background: transparent;
+}
+#section_10 {
+	background: url('http://livedemo00.template-help.com/drupal_55960/sites/default/files/parallax-8.jpg') no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	height: 800px;
+	margin: 0;
+}
+.currency {
+	display: none;
+}
+

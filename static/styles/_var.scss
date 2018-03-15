@@ -1,4 +1,5 @@
 $light_black: #E0E0E0;
+$fa-font-path: "~ font-awesome/fonts";
 
 @mixin margin ($vertical, $horisontal) {
 	margin: $vertical $horisontal;
@@ -7,6 +8,7 @@ $light_black: #E0E0E0;
 	padding: $vertical $horisontal;
 }
 .curr_block {
+	font-size: 10px;
 	background-color: $light_black;
 	@include margin (5px, 5px);
 	@include padding (10px, 10px);
