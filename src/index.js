@@ -10,7 +10,11 @@ import '../node_modules/chart.js/dist/Chart.min.js'
 import '../node_modules/font-awesome/scss/font-awesome.scss';
 
 
-// console.log(Isotope);
+(function() {
+	if ('serviceWorker' in navigator) {
+		navigator.serviceWorker.register('service-worker.js')
+	}
+})();
 
 
 $(document).ready(function(){

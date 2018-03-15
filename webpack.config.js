@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-// var Isotope = require('isotope-layout');
+const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
 module.exports = {
 	entry: {
@@ -63,6 +63,13 @@ module.exports = {
 		    $: 'jquery',
 		    jQuery: 'jquery',
 		    'window.jQuery': 'jquery'
+		}),
+		new SWPrecacheWebpackPlugin({
+			cacheId: 'ozida-' + Math.random(),
+			filename: 'service-worker.js',
+			staticFileGlobs: ['build/**.*'],
+			minify: false,
+			stripPrefix: 'build/'
 		})
 	]
 }

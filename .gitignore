@@ -2,6 +2,10 @@
 /build/*.js
 /build/*.html
 /build/*.ttf
+/build/*.woff2
+/build/*.woff
+/build/*.eot
+/build/*.svg
 /build/*.jpg
 /build/*.png
 /build/*static
