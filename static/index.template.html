@@ -13,9 +13,10 @@
 				</div>
 				<div class="nav">
 					<ul>
-						<li><a href="#section_1">Главная</a></li>
-						<li><a href="#section_3">Статистика</a></li>
-						<li><a href="#section_5">Знания</a></li>
+						<li><a href="#section_1"><i class="fa fa-home" aria-hidden="true"></i> Главная</a></li>
+						<li><a href="#section_3"><i class="fa fa-bar-chart" aria-hidden="true"></i> Статистика</a></li>
+						<li><a href="#section_5"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Знания</a></li>
+						<li><a href="#section_7"><i class="fa fa-usd" aria-hidden="true"></i> Конвертер валют</a></li>
 					</ul>
 				</div>
 				<div class="nav_mini">
@@ -23,9 +24,10 @@
 				</div>
 				<div class="sidebar">
 					<ul>
-						<li><a href="#section_1">Главная</a></li>
-						<li><a href="#section_3">Статистика</a></li>
-						<li><a href="#section_5">Знания</a></li>
+						<li><a href="#section_1"><i class="fa fa-home" aria-hidden="true"></i> Главная</a></li>
+						<li><a href="#section_3"><i class="fa fa-bar-chart" aria-hidden="true"></i> Статистика</a></li>
+						<li><a href="#section_5"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Знания</a></li>
+						<li><a href="#section_7"><i class="fa fa-usd" aria-hidden="true"></i> Конвертер валют</a></li>
 					</ul>
 				</div>	
 			</div>
@@ -140,10 +142,21 @@
 	</div>
 	<div id="section_7">
 		<div class="wrapper">
+			<h2>Конвертация валют</h2>
+			<p>Данные взяты с официального сайта <a href="https://privatbank.ua/ru">ПриватБанка</a> на актуальную дату.</p>
 		</div>
 	</div>
 	<div id="section_8">
 		<div class="wrapper">
+			<div class="currency"></div>
+			<div class="for_input">
+				<p>Моя желаемая зарплата (в дол.США). При изменении валюты - будет пересчитана в выбранную.</p>
+				<input type="text" name="text" value='400' id="my_conv" readonly="readonly"><br>
+				<p>Выберите валюту, которую хотите конвертировать, укажите сумму и выберите валюту, в которую нужно пересчитать сумму денег.</p>
+				<input type="text" name="text" id="custom_conv">
+				<div class="curr_radio">
+				</div>
+			</div>
 		</div>
 	</div>
 	<div id="section_9">
