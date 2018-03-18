@@ -52,6 +52,23 @@ module.exports = {
 	  //       }    
         },
 		]
+	},
+	stats: {
+		children: false,
+        chunks: false,
+        colors: true,
+        depth: false,
+        entrypoints: false,
+        errors: true,
+        errorDetails: true,
+        hash: true,
+        modules: false,
+        maxModules: 15,
+        modulesSort: "field",
+        performance: true,
+        timings: true,
+        version: true,
+        warnings: false
 	},	
 	plugins: [
 		new HtmlWebpackPlugin({template:'./static/index.template.html'}),

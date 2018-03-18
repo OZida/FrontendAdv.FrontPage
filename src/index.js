@@ -16,6 +16,34 @@ import '../node_modules/font-awesome/scss/font-awesome.scss';
 	}
 })();
 
+$(document).ready(function(){
+	// var converter = $('#converter').val();
+	// var checked = $('input:checked').val();
+	
+$('#custom_conv').on('change', function () {
+	let custom_input = $('input:checked').val();
+	let my_conv = $('#my_conv').val();
+	// var usd = $('#USD').val();
+	// var res = $('#converter').val($('#converter').val() * input);
+	let custom_res = $('#custom_conv').val() * custom_input;
+	let my_res = 400 * $('#USD').val();
+
+	$('.curr').on('click', 'input', function() {
+		
+
+		$('#custom_conv').val(custom_res / $('input:checked').val());
+
+		$('#my_conv').val(my_res / $('input:checked').val());
+		// $('#output2').html($('input:checked').val());
+		// console.log($(converter));
+		// console.log($(checked));
+	
+		})
+
+	})
+
+});	
+
 
 $(document).ready(function(){
  	$('.owl-carousel').owlCarousel({
