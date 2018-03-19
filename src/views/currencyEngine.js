@@ -19,19 +19,14 @@ export default {
 		}).forEach(function(el){
 				body_second.appendChild(el);
 		});
-		let usd = document.getElementById('USD');
-			usd.setAttribute('checked', 'checked');
-		let	btc = document.getElementById('BTC');
-		btc.value = btc.value * usd.value;
-
-
+		
 		data.map(el => {
 			let div = document.createElement('div'),
 				h3 = document.createElement('h4'),
 				p_buy = document.createElement('p'),
 				p_sale = document.createElement('p');
 
-			h3.innerHTML = el.ccy;
+			h3.innerHTML = el.ccy + ' (' + el.base_ccy + ')';
 			p_buy.innerHTML = 'Курс покупки - ' + el.buy;
 			p_sale.innerHTML = 'Курс продажи - ' + el.sale;
 
@@ -44,5 +39,10 @@ export default {
 		}).forEach(function(el){
 				body_first.appendChild(el);
 		});
+
+		let usd = document.getElementById('USD');
+			usd.setAttribute('checked', 'checked');
+		let	btc = document.getElementById('BTC');
+		btc.value = btc.value * usd.value;
 	}
 }

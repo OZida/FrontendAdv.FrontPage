@@ -19,16 +19,17 @@ import '../node_modules/font-awesome/scss/font-awesome.scss';
 $(document).ready(function(){
 	
 $('#custom_conv').on('change', function () {
+	
 	let custom_input = $('input:checked').val();
 	let custom_res = $('#custom_conv').val() * custom_input;
 	let my_res = 400 * $('#USD').val();
 
-	$('.curr').on('click', 'input', function() {
+	$('.curr_radio').on('click', 'input', function() {
 		
 		$('#custom_conv').val(custom_res / $('input:checked').val());
 		$('#my_conv').val(my_res / $('input:checked').val());
-		})
-	})
+		});
+	});
 });	
 //плагин карусель
 $(document).ready(function(){
