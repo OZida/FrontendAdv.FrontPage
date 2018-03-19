@@ -2,6 +2,29 @@
 
 	#adaptiv {
 
+		.scrollTop {
+			text-decoration: none;
+			outline: none;
+			display: none;
+			position: fixed;
+			z-index: 1999;
+			right: 1rem;
+			bottom: 1rem;
+			cursor: pointer;
+			padding: 20px;
+			margin: 10px 20px;
+			border-radius: 40px;
+			box-shadow: 0 0 40px 40px #40e0d0 inset, 0 0 0 0 #40e0d0;
+			font-size: 30px;
+			font-weight: bold;
+			letter-spacing: 2px;
+			color: #fff;
+			transition: .15s ease-in-out;
+			&:hover {
+				box-shadow: 0 0 10px 0 #40e0d0 inset, 0 0 10px 4px #40e0d0;
+				color: #40e0d0;
+			}
+		}
 		.wrapper {
 		margin: 0 auto;
 		max-width: 1210px;
@@ -450,6 +473,30 @@
 @media (max-width: 640px) {
 
 	#adaptiv {
+		
+		.scrollTop {
+			text-decoration: none;
+			outline: none;
+			display: none;
+			position: fixed;
+			z-index: 1999;
+			right: 1rem;
+			bottom: 1rem;
+			cursor: pointer;
+			padding: 20px;
+			margin: 10px 20px;
+			border-radius: 40px;
+			box-shadow: 0 0 40px 40px #40e0d0 inset, 0 0 0 0 #40e0d0;
+			font-size: 30px;
+			font-weight: bold;
+			letter-spacing: 2px;
+			color: #fff;
+			transition: .15s ease-in-out;
+			&:hover {
+				box-shadow: 0 0 10px 0 #40e0d0 inset, 0 0 10px 4px #40e0d0;
+				color: #40e0d0;
+			}
+		}
 		.wrapper {
 			margin: 0 auto;
 			min-width: 462px;

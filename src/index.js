@@ -9,42 +9,28 @@ import '../node_modules/owl.carousel/dist/assets/owl.theme.default.css';
 import '../node_modules/chart.js/dist/Chart.min.js'
 import '../node_modules/font-awesome/scss/font-awesome.scss';
 
-
+//кеширование страницы
 (function() {
 	if ('serviceWorker' in navigator) {
 		navigator.serviceWorker.register('service-worker.js')
 	}
 })();
-
+//конвертер валют
 $(document).ready(function(){
-	// var converter = $('#converter').val();
-	// var checked = $('input:checked').val();
 	
 $('#custom_conv').on('change', function () {
 	let custom_input = $('input:checked').val();
-	let my_conv = $('#my_conv').val();
-	// var usd = $('#USD').val();
-	// var res = $('#converter').val($('#converter').val() * input);
 	let custom_res = $('#custom_conv').val() * custom_input;
 	let my_res = 400 * $('#USD').val();
 
 	$('.curr').on('click', 'input', function() {
 		
-
 		$('#custom_conv').val(custom_res / $('input:checked').val());
-
 		$('#my_conv').val(my_res / $('input:checked').val());
-		// $('#output2').html($('input:checked').val());
-		// console.log($(converter));
-		// console.log($(checked));
-	
 		})
-
 	})
-
 });	
-
-
+//плагин карусель
 $(document).ready(function(){
  	$('.owl-carousel').owlCarousel({
 	  	nav:true,
@@ -54,6 +40,7 @@ $(document).ready(function(){
 	  	autoplay: 3000,
 	});
 });
+//плагин паралакс
 $(document).ready(function(){
 	$('#section_3').parallax({
 		speed: 0.5,
@@ -76,7 +63,7 @@ $(document).ready(function(){
 		bleed: 400,
 	})
 });	
-
+//плагин изотоп
 $(document).ready(function(){
 
  	let grid = new Isotope('.grid', {
@@ -93,7 +80,7 @@ $(document).ready(function(){
         }
     });
 });
-
+//построение диаграмы
 var programCanvas = document.getElementById("programChart");
 
 Chart.defaults.global.defaultFontFamily = "Lato";
@@ -115,7 +102,6 @@ var programPeople = {
     'rgba(240, 99, 132, 1)'
   ],
 };
-
 var barChart = new Chart(programCanvas, {
   type: 'bar',
   data: {
@@ -124,7 +110,7 @@ var barChart = new Chart(programCanvas, {
   },
 
 });
-
+//фиксирование херера при прокрутке
 $(document).ready(function($){
  
 	var nav = $('.header');
@@ -138,9 +124,26 @@ $(document).ready(function($){
 	});
  
 });
-
+//появление бокового меню
 $(document).ready(function($){
 	$('.nav_mini').on('click', function(){
 		$('.sidebar').toggleClass('activ');
 	})
+});
+$(document).ready(function($){
+	let speed = 500,
+	$scrollTop = $('<a href="#" class="scrollTop"><i class="fa fa-chevron-up"></i></a>').appendTo('body');
+	        
+	$scrollTop.click(function(e){
+	    e.preventDefault();
+	    $('html:not(:animated),body:not(:animated)').animate({ scrollTop: 0}, speed );
+	});
+
+	function show_scrollTop(){
+	    ($(window).scrollTop() > 300) ? $scrollTop.fadeIn(600) : $scrollTop.fadeOut(600);
+	}
+	$(window).scroll( function(){ 
+		show_scrollTop();
+	});
+	show_scrollTop();
 });
