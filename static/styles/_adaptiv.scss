@@ -187,7 +187,7 @@ $main_bg: #191d2b;
 
 				p {
 					font-family: 'Roboto Slab', serif;
-					font-size: 14px;
+					font-size: 18px;
 					text-align: justify;
 					text-indent: 1.2em;
 
@@ -208,7 +208,7 @@ $main_bg: #191d2b;
 			background: transparent;
 			text-align: center;
 			color: $first_color;
-			line-height: 2em;
+			line-height: 3em;
 			
 			h2 {
 				font-family: 'Exo', sans-serif;
@@ -358,7 +358,7 @@ $main_bg: #191d2b;
 					font-family: 'Roboto Slab', serif;
 
 					p {
-						font-size: 14px;
+						font-size: 18px;
 					}
 				}
 			}
@@ -374,7 +374,7 @@ $main_bg: #191d2b;
 				box-sizing: border-box;
 				padding: 30px 20px;
 				font-family: 'Roboto Slab', serif;
-				font-size: 16px;
+				font-size: 18px;
 				text-align: center;
 
 				#my_conv, #custom_conv {
@@ -475,6 +475,68 @@ $main_bg: #191d2b;
 					}
 				}	
 			}	
+		}
+		.footer	{
+			background-color: $main_bg;
+			height: 180px;
+			padding-top: 80px;
+			box-sizing: border-box;
+			&:after {
+				content:'';
+				display: block;
+				clear: both;
+			}	
+			.footer_content {
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				box-sizing: border-box;
+				padding: 0 20px;
+				
+				.author {
+					font-family: 'Roboto Slab', serif;
+					font-size: 18px;
+					color: $first_color;
+				}
+				.contacts {
+					color: $first_color;
+					display: flex;
+					justify-content: space-between;
+
+					a {
+						color: $first_color;
+						text-decoration: none;
+						cursor: pointer;
+						padding: 10px 20px 0;
+						border: none;
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						
+						.fa {
+							font-size: 23px;
+						}
+						p {
+							font-family: 'Roboto Slab', serif;
+							font-size: 18px;
+							display: none;
+						}
+
+					}
+					.footer_activ {
+						box-shadow: 0 0 10px 0 $fourth_color inset, 0 0 10px 4px $fourth_color;
+						color: $fourth_color;
+						&:last-child {
+							padding: 10px 20px 15px;
+						}
+						p {
+							display: block;
+							margin: 0 0 5px;
+							
+						}
+					}
+				}
+			}
 		}
 	}
 }
