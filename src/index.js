@@ -44,14 +44,14 @@ $(document).ready(function(){
 //плагин паралакс
 $(document).ready(function(){
 	$('#section_3').parallax({
-		speed: 0.5,
+		speed: 0.3,
 		imageSrc: 'http://livedemo00.template-help.com/drupal_55960/sites/default/files/parallax-2.jpg',
 		bleed: 400,
 	}),
 	$('#section_5').parallax({
 		speed: 0.3,
 		imageSrc: 'http://livedemo00.template-help.com/drupal_55960/sites/default/files/parallax-4.jpg',
-		bleed: 500,
+		bleed: 400,
 	}),
 	$('#section_7').parallax({
 		speed: 0.3,
@@ -61,7 +61,7 @@ $(document).ready(function(){
 		$('#section_9').parallax({
 		speed: 0.3,
 		imageSrc: 'http://livedemo00.template-help.com/drupal_55960/sites/default/files/parallax-7.jpg',
-		bleed: 400,
+		bleed: 500,
 	})
 });	
 //плагин изотоп
@@ -84,8 +84,8 @@ $(document).ready(function(){
 //построение диаграмы
 var programCanvas = document.getElementById("programChart");
 
-Chart.defaults.global.defaultFontFamily = "Lato";
-Chart.defaults.global.defaultFontSize = 18;
+Chart.defaults.global.defaultFontFamily = 'Roboto Slab';
+Chart.defaults.global.defaultFontSize = 16;
 Chart.defaults.global.defaultFontColor = 'black';
 
 var programPeople = {
@@ -111,8 +111,8 @@ var barChart = new Chart(programCanvas, {
   },
 
 });
-//фиксирование херера при прокрутке
-$(document).ready(function($){
+//фиксирование хедера при прокрутке
+$(document).ready(function(){
  
 	var nav = $('.header');
  
@@ -126,12 +126,13 @@ $(document).ready(function($){
  
 });
 //появление бокового меню
-$(document).ready(function($){
+$(document).ready(function(){
 	$('.nav_mini').on('click', function(){
 		$('.sidebar').toggleClass('activ');
 	})
 });
-$(document).ready(function($){
+//отображение кнопки scrollTop и ее функции
+$(document).ready(function(){
 	let speed = 500,
 	$scrollTop = $('<a href="#" class="scrollTop"><i class="fa fa-chevron-up"></i></a>').appendTo('body');
 	        
@@ -148,3 +149,35 @@ $(document).ready(function($){
 	});
 	show_scrollTop();
 });
+//подсветка и отображение контактов
+$(document).ready(function(){
+	$('.contacts').on('click', 'a', function(){
+		if ( !$(this).hasClass('footer_activ') ) {
+			$(this).parents('.wrapper').find('.footer_activ').removeClass('footer_activ');
+			$(this).addClass('footer_activ');
+		}	
+	})
+});
+//одноразовый вызов попапа при скроле в самый низ	
+$(document).ready(function(){
+	let marker = true;
+	
+	$(window).on('scroll', function() {
+
+		if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+			if (marker) {
+			marker = false;
+			
+				$('.overlay, .popup').fadeIn(1000, function(){
+					$('.overlay, .popup animate').css({'opacity': 1, 'visibility': 'visible'});
+
+					setTimeout(function(){
+						$('.overlay, .popup').fadeOut(1000, function(){
+							$('.overlay, .popup').css({'opacity': 0, 'visibility': 'hidden'});
+						});
+					}, 2000);
+				});
+			}
+		}
+	});
+});	

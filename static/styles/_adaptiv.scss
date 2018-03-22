@@ -1,3 +1,26 @@
+html,
+body,
+div,
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+}
+$first_color: #fff;
+$second_color: #9b9b9b;
+$third_color: #5dd7d4;
+$fourth_color: #40e0d0;
+$main_bg: #191d2b;
+
+
+
+@mixin a {
+	text-decoration: none;
+	color: red;
+	font-family: 'Exo', sans-serif;
+	font-weight: 700;
+}
+
 @media (min-width: 961px) {
 
 	#adaptiv {
@@ -7,22 +30,22 @@
 			outline: none;
 			display: none;
 			position: fixed;
-			z-index: 1999;
+			z-index: 99999;
 			right: 1rem;
-			bottom: 1rem;
+			bottom: 6.5rem;
 			cursor: pointer;
-			padding: 20px;
+			padding: 15px;
 			margin: 10px 20px;
 			border-radius: 40px;
-			box-shadow: 0 0 40px 40px #40e0d0 inset, 0 0 0 0 #40e0d0;
+			box-shadow: 0 0 40px 40px $fourth_color inset, 0 0 0 0 $fourth_color;
 			font-size: 30px;
 			font-weight: bold;
 			letter-spacing: 2px;
-			color: #fff;
+			color: $first_color;
 			transition: .15s ease-in-out;
 			&:hover {
-				box-shadow: 0 0 10px 0 #40e0d0 inset, 0 0 10px 4px #40e0d0;
-				color: #40e0d0;
+				box-shadow: 0 0 10px 0 $fourth_color inset, 0 0 10px 4px $fourth_color;
+				color: $fourth_color;
 			}
 		}
 		.wrapper {
@@ -36,12 +59,12 @@
 			top: 0;
 			left: 0;
 			width: 100%;
-			background-color: #191d2b;
+			background-color: $main_bg;
 			
 			.menu {
 				margin: 0;
 				height: 100px;
-				background-color: #191d2b;
+				background-color: $main_bg;
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
@@ -72,12 +95,12 @@
 							a {
 								cursor: pointer;
 								text-decoration: none;
-								color: #9b9b9b;
+								color: $second_color;
 								font-size: 15px;
 								font-weight: 400;
 								text-transform: uppercase;
 								&:hover {
-									color: #5dd7d4;
+									color: $third_color;
 									transition: all 0.6s ease;
 								}
 							}
@@ -129,15 +152,15 @@
 					font-size: 44px;
 					line-height: 1.5em;
 					margin: 30px;
-					color: #fff;
+					color: $first_color;
 					&:hover {
-						color: #5dd7d4;
+						color: $third_color;
 						transition: all 0.6s ease;
 					}	
 				}
 				p {
 					font-family: 'Exo', sans-serif;
-					color: #5dd7d4;
+					color: $third_color;
 					line-height: 1.2em;
 					margin: 25px;
 					font-weight: 300;
@@ -149,7 +172,7 @@
 			background: url('http://livedemo00.template-help.com/drupal_55960/sites/default/files/parallax-1.jpg') no-repeat;
 			-webkit-background-size: cover;
 			background-size: cover;
-			height: 500px;
+			height: 650px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -158,30 +181,33 @@
 				width: 100%;
 				padding: 30px 20px;
 				background: rgba(25,29,43,0.6);
-				color: #fff;
+				color: $first_color;
 				border-radius: 15px;
 				box-sizing: border-box;
 
 				p {
-					font-family: 'Marck Script', cursive;
-					font-size: 18px;
+					font-family: 'Roboto Slab', serif;
+					font-size: 14px;
 					text-align: justify;
 					text-indent: 1.2em;
 
 					span {
-						color: #5dd7d4;
+						color: $third_color;
 						font-weight: 300;
 						text-decoration: underline;
+					}
+					a {
+						@include a;
 					}
 				}
 			}
 		}
 		#section_3 {
 			padding-top: 100px;
-			min-height: 300px;
+			height: 300px;
 			background: transparent;
 			text-align: center;
-			color: #fff;
+			color: $first_color;
 			line-height: 2em;
 			
 			h2 {
@@ -194,8 +220,7 @@
 				font-weight: 300;
 
 				a {
-					text-decoration: none;
-					color: red;
+					@include a;
 				}
 			}
 		}
@@ -203,7 +228,7 @@
 			background: url('http://livedemo00.template-help.com/drupal_55960/sites/default/files/parallax-3-1.jpg') no-repeat;
 			-webkit-background-size: cover;
 			background-size: cover;
-			min-height: 460px;
+			height: 600px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -215,11 +240,11 @@
 		}
 		#section_5 {
 			padding-top: 80px;
-			min-height: 200px;
+			height: 250px;
 			margin: 0;
 			background: transparent;
 			text-align: center;
-			color: #fff;
+			color: $first_color;
 			line-height: 2em;
 			
 			h2 {
@@ -232,8 +257,7 @@
 				font-weight: 300;
 
 				a {
-					text-decoration: none;
-					color: red;
+					@include a;
 				}
 			}
 		}
@@ -241,7 +265,7 @@
 			background: url('http://livedemo00.template-help.com/drupal_55960/sites/default/files/parallax-5.jpg') no-repeat;
 			-webkit-background-size: cover;
 			background-size: cover;
-			min-height: 850px;
+			height: 1100px;
 			margin: 0;
 			text-align: center;
 			padding-top: 50px;
@@ -260,17 +284,17 @@
 				    font-weight: 300;
 				    font-size: 15px;
 				    line-height: 1.2em;
-				    color: #fff;
+				    color: $first_color;
 				    text-transform: uppercase;
 				    &:focus {
 				    	outline: none;
 				    }
 				}
-			}
 				.is-checked, .button:hover {
-					background: #fff;
-		    		color: #9b9b9b;
+					background: $first_color;
+					color: $second_color;
 				}
+			}
 			.grid {
 				width: 100%;
 
@@ -281,18 +305,18 @@
 					margin: 15px;
 					padding: 30px 10px;
 					background: rgba(25,29,43,0.8);
-					color: #fff;
+					color: $first_color;
 					font-size: 18px;
 				}
 			}
 		}		
 		#section_7 {
 			padding-top: 80px;
-			min-height: 200px;
+			height: 200px;
 			margin: 0;
 			background: transparent;
 			text-align: center;
-			color: #fff;
+			color: $first_color;
 			line-height: 2em;
 			
 			h2 {
@@ -305,8 +329,7 @@
 				font-weight: 300;
 
 				a {
-					text-decoration: none;
-					color: red;
+					@include a;
 				}
 			}
 		}
@@ -328,7 +351,7 @@
 					background: rgba(25,29,43,0.6);
 					border-radius: 15px;
 					box-sizing: border-box;
-					color: #fff;
+					color: $first_color;
 					padding:10px 10px; 
 					width: 20%;
 					margin: 0;
@@ -346,7 +369,7 @@
 				justify-content: space-around;
 				align-items: center;
 				background: rgba(25,29,43,0.6);
-				color: #fff;
+				color: $first_color;
 				border-radius: 15px;
 				box-sizing: border-box;
 				padding: 30px 20px;
@@ -356,9 +379,9 @@
 
 				#my_conv, #custom_conv {
 					text-align: center;
-					background-color: #191d2b;
-					border: 2px solid #fff;
-					color: #fff;
+					background-color: $main_bg;
+					border: 2px solid $first_color;
+					color: $first_color;
 					width: 250px;
 					height: 30px;
 					font-family: 'Roboto Slab', serif;
@@ -367,7 +390,7 @@
 						outline: none;
 					}
 					&::selection {
-						background-color: #fff;
+						background-color: $first_color;
 						color: #000;
 					}	
 				}
@@ -412,7 +435,7 @@
 						transition: all 0.15s ease-out 0s;
 						background: #cbd1d8;
 						border: none;
-						color: #fff;
+						color: $first_color;
 						cursor: pointer;
 						display: inline-block;
 						margin-right: 0.5rem;
@@ -427,7 +450,7 @@
 							background: #9faab7;
 						}
 						&:checked {
-							background: #40e0d0;
+							background: $fourth_color;
 						}
 						&:checked::before {
 							height: 40px;
@@ -443,7 +466,7 @@
 							-webkit-animation: click-wave 0.65s;
 							-moz-animation: click-wave 0.65s;
 							animation: click-wave 0.65s;
-							background: #40e0d0;
+							background: $fourth_color;
 							content: '';
 							display: block;
 							position: relative;
@@ -452,18 +475,6 @@
 					}
 				}	
 			}	
-		}
-		#section_9 {
-			height: 400px;
-			margin: 0;
-			background: transparent;
-		}
-		#section_10 {
-			background: url('http://livedemo00.template-help.com/drupal_55960/sites/default/files/parallax-8.jpg') no-repeat;
-			-webkit-background-size: cover;
-			background-size: cover;
-			height: 800px;
-			margin: 0;
 		}
 	}
 }
@@ -479,22 +490,22 @@
 			outline: none;
 			display: none;
 			position: fixed;
-			z-index: 1999;
+			z-index: 99999;
 			right: 1rem;
-			bottom: 1rem;
+			bottom: 6.5rem;
 			cursor: pointer;
-			padding: 20px;
+			padding: 15px;
 			margin: 10px 20px;
 			border-radius: 40px;
-			box-shadow: 0 0 40px 40px #40e0d0 inset, 0 0 0 0 #40e0d0;
+			box-shadow: 0 0 40px 40px $fourth_color inset, 0 0 0 0 $fourth_color;
 			font-size: 30px;
 			font-weight: bold;
 			letter-spacing: 2px;
-			color: #fff;
+			color: $first_color;
 			transition: .15s ease-in-out;
 			&:hover {
-				box-shadow: 0 0 10px 0 #40e0d0 inset, 0 0 10px 4px #40e0d0;
-				color: #40e0d0;
+				box-shadow: 0 0 10px 0 $fourth_color inset, 0 0 10px 4px $fourth_color;
+				color: $fourth_color;
 			}
 		}
 		.wrapper {
@@ -508,11 +519,12 @@
 			top: 0;
 			left: 0;
 			width: 100%;
-			background-color: #191d2b;
+			background-color: $main_bg;
+			box-sizing: border-box;
 
 			.menu {
 				height: 90px;
-				background-color: #191d2b;
+				background-color: $main_bg;
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
@@ -531,11 +543,11 @@
 				.nav_mini {
 					display: block;
 					cursor: pointer;
-					color: #9b9b9b;
+					color: $second_color;
 					font-size: 30px;
 					margin-right: 50px;
 					&:hover {
-						color: #5dd7d4;
+						color: $third_color;
 						transition: all 0.6s ease;
 					}
 				}
@@ -543,8 +555,11 @@
 					display: block;
 					position: fixed;
 					top: 90px;
-					right: -150px;
-					transition: right 0.6s ease-out 0.3s;
+					right: -180px;
+					transition: right 0.4s ease-out 0.3s;
+					height: 100%;
+					width: 180px;
+					background-color: $main_bg;
 
 					ul {
 						list-style: none;
@@ -552,13 +567,13 @@
 						flex-direction: column;
 						justify-content: space-around;
 						align-items: center;
-						background-color: #191d2b;
+						background-color: $main_bg;
 
 						li {
 							font-family: 'Roboto Slab', serif;
-							width: 150px;
+							width: 100%;
 							height: 40px;
-							border-bottom: 1px solid #9b9b9b;
+							border-bottom: 1px solid $second_color;
 							display: flex;
 							justify-content: space-around;
 							align-items: center;
@@ -566,12 +581,12 @@
 							a {
 								cursor: pointer;
 								text-decoration: none;
-								color: #9b9b9b;
+								color: $second_color;
 								font-size: 15px;
 								font-weight: 400;
 								text-transform: uppercase;
 								&:hover {
-									color: #5dd7d4;
+									color: $third_color;
 									transition: all 0.6s ease;
 								}
 							}
@@ -592,9 +607,10 @@
 				left: 0; 
 				top: 0; 
 				width: 100%;
+				box-sizing: border-box;
 		}
 		#section_1 {
-			background-color: #191d2b;
+			background-color: $main_bg;
 			margin-top: 90px;
 
 			.owl-theme .owl-dots .owl-dot span {
@@ -609,15 +625,15 @@
 					font-family: 'Exo', sans-serif;
 					font-size: 28px;
 					margin: 10px;
-					color: #fff;
+					color: $first_color;
 					&:hover {
-						color: #5dd7d4;
+						color: $third_color;
 						transition: all 0.6s ease;
 					}	
 				}
 				p {
 					font-family: 'Exo', sans-serif;
-					color: #5dd7d4;
+					color: $third_color;
 					line-height: 1.2em;
 					margin: 10px;
 					font-weight: 300;
@@ -629,7 +645,7 @@
 			background: url('http://livedemo00.template-help.com/drupal_55960/sites/default/files/parallax-1.jpg') no-repeat;
 			-webkit-background-size: cover;
 			background-size: cover;
-			height: 600px;
+			height: 900px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -638,30 +654,34 @@
 				width: 100%;
 				padding: 30px 20px;
 				background: rgba(25,29,43,0.6);
-				color: #fff;
+				color: $first_color;
 				border-radius: 15px;
 				box-sizing: border-box;
 
 				p {
-					font-family: 'Marck Script', cursive;
+					font-family: 'Roboto Slab', serif;
+					font-size: 14px;
 					text-align: justify;
 					text-indent: 1.2em;
 
 					span {
-						color: #5dd7d4;
+						color: $third_color;
 						font-weight: 300;
 						text-decoration: underline;
 					}
+					a {
+						@include a;
+					}	
 				}
 			}
 		}
 		#section_3 {
-			padding-top: 100px;
-			min-height: 300px;
+			padding-top: 60px;
+			height: 300px;
 			margin: 0;
 			background: transparent;
 			text-align: center;
-			color: #fff;
+			color: $first_color;
 			line-height: 2em;
 			
 			h2 {
@@ -674,8 +694,7 @@
 				font-weight: 300;
 
 				a {
-					text-decoration: none;
-					color: red;
+					@include a;
 				}
 			}
 		}
@@ -683,23 +702,23 @@
 			background: url('http://livedemo00.template-help.com/drupal_55960/sites/default/files/parallax-3-1.jpg') no-repeat;
 			-webkit-background-size: cover;
 			background-size: cover;
-			min-height: 450px;
+			height: 500px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 
 			#programmingChart {
-				width: 50%;
-				height: 50%;
+				width: 100%;
+				height: 100%;
 			}
 		}
 		#section_5 {
 			padding-top: 80px;
-			min-height: 200px;
+			height: 200px;
 			margin: 0;
 			background: transparent;
 			text-align: center;
-			color: #fff;
+			color: $first_color;
 			line-height: 2em;
 			
 			h2 {
@@ -712,8 +731,7 @@
 				font-weight: 300;
 
 				a {
-					text-decoration: none;
-					color: red;
+					@include a;
 				}
 			}
 		}
@@ -721,7 +739,7 @@
 			background: url('http://livedemo00.template-help.com/drupal_55960/sites/default/files/parallax-5.jpg') no-repeat;
 			-webkit-background-size: cover;
 			background-size: cover;
-			height: 1100px;
+			height: 1300px;
 			margin: 0;
 			text-align: center;
 			padding-top: 50px;
@@ -740,17 +758,17 @@
 				    font-weight: 300;
 				    font-size: 14px;
 				    line-height: 1.2em;
-				    color: #fff;
+				    color: $first_color;
 				    text-transform: uppercase;
 				    &:focus {
 				    	outline: none;
 				    }
 				}
-			}
 				.is-checked, .button:hover {
-					background: #fff;
-		    		color: #9b9b9b;
+					background: $first_color;
+					color: $second_color;
 				}
+			}
 			.grid {
 				width: 100%;
 
@@ -761,7 +779,7 @@
 					margin: 5px;
 					padding: 30px 10px;
 					background: rgba(25,29,43,0.8);
-					color: #fff;
+					color: $first_color;
 				}
 			}
 		}		
@@ -770,7 +788,7 @@
 			height: 200px;
 			background: transparent;
 			text-align: center;
-			color: #fff;
+			color: $first_color;
 			line-height: 2em;
 			
 			h2 {
@@ -783,8 +801,7 @@
 				font-weight: 300;
 
 				a {
-					text-decoration: none;
-					color: red;
+					@include a;
 				}
 			}
 		}
@@ -807,7 +824,7 @@
 					background: rgba(25,29,43,0.6);
 					border-radius: 15px;
 					box-sizing: border-box;
-					color: #fff;
+					color: $first_color;
 					padding:0 10px; 
 					width: 100%;
 					margin: 10px 0px;
@@ -825,7 +842,7 @@
 				justify-content: space-around;
 				align-items: center;
 				background: rgba(25,29,43,0.6);
-				color: #fff;
+				color: $first_color;
 				border-radius: 15px;
 				box-sizing: border-box;
 				padding: 30px 20px;
@@ -835,9 +852,9 @@
 
 				#my_conv, #custom_conv {
 					text-align: center;
-					background-color: #191d2b;
-					border: 2px solid #fff;
-					color: #fff;
+					background-color: $main_bg;
+					border: 2px solid $first_color;
+					color: $first_color;
 					width: 250px;
 					height: 30px;
 					font-family: 'Roboto Slab', serif;
@@ -846,7 +863,7 @@
 						outline: none;
 					}
 					&::selection {
-						background-color: #fff;
+						background-color: $first_color;
 						color: #000;
 					}	
 				}
@@ -855,6 +872,7 @@
 					display: flex;
 					justify-content: space-around;
 					align-items: center;
+					width: 100%;
 
 					@keyframes click-wave {
 						0% {
@@ -891,7 +909,7 @@
 						transition: all 0.15s ease-out 0s;
 						background: #cbd1d8;
 						border: none;
-						color: #fff;
+						color: $first_color;
 						cursor: pointer;
 						display: inline-block;
 						margin-right: 0.5rem;
@@ -906,7 +924,7 @@
 							background: #9faab7;
 						}
 						&:checked {
-							background: #40e0d0;
+							background: $fourth_color;
 						}
 						&:checked::before {
 							height: 40px;
@@ -922,7 +940,7 @@
 							-webkit-animation: click-wave 0.65s;
 							-moz-animation: click-wave 0.65s;
 							animation: click-wave 0.65s;
-							background: #40e0d0;
+							background: $fourth_color;
 							content: '';
 							display: block;
 							position: relative;
@@ -932,17 +950,72 @@
 				}	
 			}	
 		}
-		#section_9 {
-			height: 400px;
-			margin: 0;
-			background: transparent;
-		}
-		#section_10 {
-			background: url('http://livedemo00.template-help.com/drupal_55960/sites/default/files/parallax-8.jpg') no-repeat;
-			-webkit-background-size: cover;
-			background-size: cover;
-			height: 800px;
-			margin: 0;
+		.footer	{
+			background-color: $main_bg;
+			height: 180px;
+			padding-top: 40px;
+			box-sizing: border-box;
+			&:after {
+				content:'';
+				display: block;
+				clear: both;
+			}	
+			.footer_content {
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+				box-sizing: border-box;
+				padding: 0 20px;
+				
+				.author {
+					color: $first_color;
+				}
+				.contacts {
+					color: $first_color;
+					display: flex;
+					justify-content: flex-start;
+					margin-top: 10px;
+
+					a {
+						color: $first_color;
+						text-decoration: none;
+						cursor: pointer;
+						padding: 10px 20px 0;
+						border: none;
+						display: flex;
+						flex-direction: column;
+						align-items: center;
+						transition: .15s ease-in-out;
+						&:first-child {
+							padding: 10px 20px 0 0;
+						}
+						
+						.fa {
+							font-size: 20px;
+						}
+						p {
+							display: none;
+						}
+
+					}
+					.footer_activ {
+						box-shadow: 0 0 10px 0 $fourth_color inset, 0 0 10px 4px $fourth_color;
+						color: $fourth_color;
+						&:first-child {
+							padding: 10px 20px 0;
+						}
+						&:last-child {
+							padding: 10px 20px 15px;
+						}
+						p {
+							display: block;
+							margin: 0 0 5px;
+							
+						}
+					}
+				}
+			}
 		}
 	}
 }

@@ -23,4 +23,23 @@ describe('Test group for string', function(){
 	it('will show the word index', function(){
 		expect('Iteaw'.indexOf("w")).not.toBe(-1);
 	})
+})
+describe('Test group of other comparisons', function(){
+
+	it('will find the matched substring', function(){
+		expect('I can play this game').toMatch('play');
+	})
+	it('value must be greater than', function(){
+		expect(100 + 50).toBeGreaterThan(10);
+	})
+	it('value must be wrong', function(){
+		expect(5 < 0).toBeFalsy(5);
+	})
+	it('value must not be null', function(){
+		expect(10).not.toBeNull();
+	})
+	it('value must contain', function(){
+		expect([10, -5, 0]).toContain(-5);
+   		expect("I can play this game").not.toContain(0);
+	})
 })	

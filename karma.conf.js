@@ -5,6 +5,15 @@ module.exports = function (config) {
 		files: [
 			{pattern: './*.js'}
 		],
-		autoWatch: true
+		autoWatch: true,
+		reporters: ['progress', 'html'],
+		htmlReporter: {
+			outputFile: './units.html',
+			pageTitle: 'Unit Tests',
+			subPageTitle: 'A sample project description',
+			groupSuites: true,
+			useCompactStyle: true,
+			useLegacyStyle: true
+		}
 	});
 };
