@@ -3,15 +3,15 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Front Page</title>
-	<link rel="icon" href="../static/img/favicon.ico" type="image/x-icon">
-	<link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon"> 
+	<link rel="icon" href="./static/img/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="./static/img/favicon.ico" type="image/x-icon"> 
 </head>
 <body id="adaptiv">
 	<div class="header">
 		<div class="wrapper">
 			<div class="menu">
 				<div class="logo">
-					<a href="#"><img src="../static/img/logo.png"></a>
+					<a href="#"><img src="./static/img/logo.png"></a>
 				</div>
 				<div class="nav">
 					<ul>
@@ -19,6 +19,7 @@
 						<li><a href="#section_3"><i class="fa fa-bar-chart" aria-hidden="true"></i> Статистика</a></li>
 						<li><a href="#section_5"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Знания</a></li>
 						<li><a href="#section_7"><i class="fa fa-usd" aria-hidden="true"></i> Конвертер валют</a></li>
+						<li><a href="#section_9"><i class="fa fa-cogs" aria-hidden="true"></i> Мои проекты</a></li>
 					</ul>
 				</div>
 				<div class="nav_mini">
@@ -30,48 +31,21 @@
 						<li><a href="#section_3"><i class="fa fa-bar-chart" aria-hidden="true"></i> Статистика</a></li>
 						<li><a href="#section_5"><i class="fa fa-graduation-cap" aria-hidden="true"></i> Знания</a></li>
 						<li><a href="#section_7"><i class="fa fa-usd" aria-hidden="true"></i> Конвертер валют</a></li>
+						<li><a href="#section_9"><i class="fa fa-cogs" aria-hidden="true"></i> Мои проекты</a></li>
 					</ul>
 				</div>	
 			</div>
 		</div>
 	</div>
-	<div id="section_1">	
-		<div class="fadeOut owl-carousel owl-theme owl-loaded owl-drag">
-			<div>
-				<img src="../static/img/slide-1.jpg">
-				<div class="slider_filling">
-					<div class="wrapper">
-						<h2>Если Вы ищете</h2>
-						<p>Целеустремленного, инициативного, быстро обучаемого сотрудника?</p>
-						<p>Вы его нашли! Ознакомьтесь с моей страничкой</p>
-					</div>
-				</div>
-			</div>
-			<div><img src="../static/img/slide-2.jpg">
-				<div class="slider_filling">
-					<div class="wrapper">
-						<h2>Если Вы ищете</h2>
-						<p>Ответственного, надежного, внимательного к деталям сотрудника?</p>
-						<p>Вы его нашли! Ознакомьтесь с моей страничкой</p>
-					</div>
-				</div>
-			</div>
-			<div><img src="../static/img/slide-3.jpg">
-				<div class="slider_filling">
-					<div class="wrapper">
-						<h2>Если Вы ищете</h2>
-						<p>Активного, добросовестного, коммуникабельного сотрудника?</p>
-						<p>Вы его нашли! Ознакомьтесь с моей страничкой</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
+	<div id="section_1">
+		<img class='animated zoomIn' src="./static/img/logo.png">
+		<h1 class='animated'>OZida</h1>
+		<p class='animated'>Когда объединяются великие идеи - возможно все &#169;Sun</p>
 	</div>
 	<div id="section_2">
 		<div class="wrapper">
 			<div class="introduction">
-				<p>Меня зовут <span>Козленко Юлия</span>, и я хочу рассказать немного о своих проектах.</p>
+				<p>Меня зовут Козленко Юлия, и я хочу рассказать немного о своих проектах.</p>
 				<p>На протяжении обучения в компании Itea.ua, я создала несколько проектов. Первый из них назывался <a href="https://github.com/OZida/JQuery.filmLibrary" target="_blank">Film Library</a>, в котором я научилась на практике применять библитеку JQuery, а также с ее помощью создавать полноценные страницы сайта, без применения плагинов , а только создавая все элементы страницы своими руками. Может показаться, что это «изобретения велосипеда», но этот подход в обучении позволил мне изучить JQuery изнутри.</p>
 				<p>Следующим проектом стало создание <a href="https://github.com/OZida/FrontendAdv.CreatingCMS" target="_blank">CMS</a>. Основной идеей его стало знакомство с webpack и MVC. С помощью последней происходила загрузка постов с удаленного API через AJAX запросы и внедрение их в проект. Далее модель (MVC) была переработана и заменена на Vue.js. К слову сказать, очень понравилась работа с этим фреймворком, т.к. разбитие на отдельные  компоненты, которые содержат верстку, код и стили, относящиеся к конкретному участку общего проекта, очень удобны в понимании и применении. Параллельно происходило знакомство и внедрение в проект таких технологий, как SCSS, Pug, PIXI.js, Flexbox и др.</p>
 				<p>Завершающим мое обучение проектом и представленный Вашему вниманию, является <a href="https://github.com/OZida/FrontendAdv.FrontPage" target="_blank">Front Page</a>. В нем уже не используется Vue.js, на смену ему снова вернулась MVC модель для загрузки валюты с API ПриватБанка и дальнейшая работа с конвертором валют. Также я была ознакомлена с принципами работы Unit testing. В большом количестве в проекте применяются JQuery плагины (в этот раз уже готовые решения), а именно: owl-carousel, parallax, Isotope и диаграммы Chart.js. Верстка проекта выполнена адаптивной с расширениями 480px-640px, 641px-960px и от 961px и более. Также с помощью SWPrecacheWebpackPlugin на сайте выполняется агрессивное кеширование сраницы.</p>
@@ -107,51 +81,51 @@
 			<div class="grid">
 				<div class="item html">
 				 	<h3 class="name">HTML</h3>
-					<img src="../static/img/html.png">
+					<img src="./static/img/html.png">
 				</div>
 				<div class="item html">
 				 	<h3 class="name">SASS/SCSS</h3>
-					<img src="../static/img/scss-sass.png">
+					<img src="./static/img/scss-sass.png">
 				</div>
 				<div class="item program">
 				 	<h3 class="name">JavaScript</h3>
-					<img src="../static/img/js.png">
+					<img src="./static/img/js.png">
 				</div>
 				<div class="item other">
 				 	<h3 class="name">GitHub</h3>
-					<img src="../static/img/github.png">
+					<img src="./static/img/github.png">
 				</div>
 				<div class="item program">
 				 	<h3 class="name">JQuery</h3>
-					<img src="../static/img/jquery.png">
+					<img src="./static/img/jquery.png">
 				</div>
 				<div class="item program">
 				 	<h3 class="name">Vue</h3>
-					<img src="../static/img/vue.png">
+					<img src="./static/img/vue.png">
 				</div>
 				<div class="item other">
 				 	<h3 class="name">Jasmine</h3>
-					<img src="../static/img/jasmine.png">
+					<img src="./static/img/jasmine.png">
 				</div>
 				<div class="item html">
 				 	<h3 class="name">Pug</h3>
-					<img src="../static/img/pug.png">
+					<img src="./static/img/pug.png">
 				</div>
 				<div class="item html">
 				 	<h3 class="name">CSS</h3>
-					<img src="../static/img/css.png">
+					<img src="./static/img/css.png">
 				</div>
 				<div class="item html">
 				 	<h3 class="name">Flexbox</h3>
-					<img src="../static/img/flexbox.png">
+					<img src="./static/img/flexbox.png">
 				</div>
 				<div class="item program">
 				 	<h3 class="name">JQuery Plugins</h3>
-					<img src="../static/img/plugins.png">
+					<img src="./static/img/plugins.png">
 				</div>
 				<div class="item other">
 				 	<h3 class="name">Webpack</h3>
-					<img src="../static/img/webpack.png">
+					<img src="./static/img/webpack.png">
 				</div>
 			</div>
 		</div>
@@ -175,6 +149,50 @@
 			</div>
 		</div>
 	</div>
+	<div id="section_9">
+		<div class="wrapper">
+			<h2>Мои проекты</h2>
+			<p>Проекты, выполненные мной во время обучения.</p>
+		</div>
+	</div>
+	<div id="section_10">
+		<div class="wrapper">
+			<div class="fadeOut owl-carousel owl-theme owl-loaded owl-drag">
+				<div class="slider_filling">
+					<div class="wrap">
+						<iframe class='frame' src="https://ozida.github.io/creating_cms/#/"></iframe>
+					</div>
+					<div class="description">
+						<h2>CMS</h2>
+						<p>В основе проекта было заложено научится применять и работать с фреймворком Vue.js. С помощью него и Vue-router было создано ряд приложений. Каждое из них выполняет свое назначение и в своей работе не зависит друг от друга.</p>
+						<a href="https://ozida.github.io/creating_cms/#/">Посмотреть проект</a>
+					</div>
+				</div>
+				<div class="slider_filling">
+					<div class="wrap">
+						<iframe class='frame' src="https://ozida.github.io/film_library/"></iframe>
+					</div>
+					<div class="description">
+						<h2>Film Library</h2>
+						<p>Проект был выполнен в стиле одного из популярных кино сайтов. С помощью двойного фильтра происходит сортировка фильмов по категории,
+						и далее по стране производителе. Фильтрацию можно производить в зависимости от выбранной анимации и ее скорости. Также есть возможность
+						добавлять фильм и слайд, предварительно заполнив соответствующую форму. Для поиска конкретного фильма используется виджет autocomplete. С помощью плагина accordion можно создать свой собственный плей-лист.</p>
+						<a href="https://ozida.github.io/film_library/">Посмотреть проект</a>
+					</div>
+				</div>
+				<div class="slider_filling">
+					<div class="wrap">
+						<iframe class='frame' src="https://ozida.github.io/front_page/"></iframe>
+					</div>
+					<div class="description">
+						<h2>Front Page</h2>
+						<p>Это проект был создан для отображения полученных мною знаний и собрание воедино моих проектов. Активное применение плагинов в совокупности с другими изученными технологиями применялись для его создания.</p>
+						<a href="https://ozida.github.io/front_page/">Посмотреть проект</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>		
 	<div class='footer'>
 		<div class="wrapper">
 			<div class="footer_content">
@@ -196,10 +214,10 @@
 			</div>
 		</div>
 	</div>
-	<div class="overlay">
+	<!-- <div class="overlay">
 		<div class="popup">
 			<h2>Спасибо за просмотр!</h2>
 		</div>
-	</div>
+	</div> -->
 </body>
 </html>

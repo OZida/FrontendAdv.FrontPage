@@ -8,6 +8,7 @@ import '../node_modules/owl.carousel/dist/assets/owl.carousel.css';
 import '../node_modules/owl.carousel/dist/assets/owl.theme.default.css';
 import '../node_modules/chart.js/dist/Chart.min.js'
 import '../node_modules/font-awesome/scss/font-awesome.scss';
+import '../node_modules/animate.css';
 
 //кеширование страницы
 (function() {
@@ -38,7 +39,10 @@ $(document).ready(function(){
 	  	loop:true,
 	  	items:1,
 	  	animateOut: 'fadeOut',
-	  	autoplay: 3000,
+	  	navText : ["<i class='fa fa-caret-left'></i>","<i class='fa fa-caret-right'></i>"],
+	  	// autoplay: 3000,
+	  	autoplayHoverPause: true,
+
 	});
 });
 //плагин паралакс
@@ -131,6 +135,27 @@ $(document).ready(function(){
 		$('.sidebar').toggleClass('activ');
 	})
 });
+$(document).ready(function(){
+	$('#section_1 img.animated').hover(function(){
+		$(this).removeClass('zoomIn');
+		$(this).addClass('tada');
+	},
+	function(){	
+		$(this).removeClass('tada');
+	});
+	$('#section_1 h1.animated').hover(function(){
+		$(this).addClass('flip');
+	},
+	function(){	
+		$(this).removeClass('flip');
+	});
+	$('#section_1 p.animated').hover(function(){
+		$(this).addClass('rubberBand');
+	},
+	function(){	
+		$(this).removeClass('rubberBand');
+	});	
+});
 //отображение кнопки scrollTop и ее функции
 $(document).ready(function(){
 	let speed = 500,
@@ -148,6 +173,16 @@ $(document).ready(function(){
 		show_scrollTop();
 	});
 	show_scrollTop();
+});
+//плавный scroll
+$(document).ready(function(){
+	$(".nav, .sidebar").on("click","a", function (event) {
+		event.preventDefault();
+		var id  = $(this).attr('href'),
+			top = $(id).offset().top;
+
+		$('body, html').animate({scrollTop: top}, 1500);
+	});
 });
 //подсветка и отображение контактов
 $(document).ready(function(){
